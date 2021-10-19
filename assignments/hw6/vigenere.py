@@ -14,7 +14,7 @@ from graphics import GraphWin, Rectangle, Point, Text, Entry
 def code(message, keyword):
     s = message
     k = keyword
-    acc = " "
+    acc = ""
     k = k.upper()
     s = s.upper()
     s = s.split(" ")
