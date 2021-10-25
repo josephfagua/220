@@ -1,0 +1,7 @@
+Lucky Davidson's average:
+Briana Flaherty's average:
+Billy Bother's average:
+Oh No's Error: The weights are less than 100.
+Hermione Heffalump's average:
+Too Bad's average: Error: The weights are more than 100.
+Kurt Kidd's average:
