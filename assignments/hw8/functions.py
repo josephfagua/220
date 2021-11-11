@@ -17,15 +17,34 @@ def getRandom(move_amount):
     return ranMove
 
 
-def hit_vertical(cy1, floor, ceiling):
-
-    if cy1 <= floor or cy1 >= ceiling:
+def hit_vertical(circle, graphwin):
+    r = circle.getRadius()
+    ceiling = graphwin.getHeight() - r
+    if circle.getCenter().getY() <= r or circle.getCenter().getY() >= ceiling:
         return True
+    else:
+        return False
 
 
-def hit_horizontal(cx1, left_wall, right_wall):
-    if cx1 <= left_wall or cx1 >= right_wall:
+def hit_horizontal(circle, graphwin):
+    r = circle.getRadius()
+    right_wall = graphwin.getWidth() - r
+    if circle.getCenter().getX() <= r or circle.getCenter().getX() >= right_wall:
         return True
+    else:
+        return False
 
 
+def did_collide(circle1, circle2):
+    cordsCB1 = circle1.getCenter()
+    cordsCB2 = circle2.getCenter()
+    cx1 = int(cordsCB1.getX())
+    cy1 = int(cordsCB1.getY())
+    cx2 = int(cordsCB2.getX())
+    cy2 = int(cordsCB2.getY())
+    distance2Points = math.sqrt((cx2 - cx1) ** 2 + (cy2 - cy1) ** 2)
+    if distance2Points < circle1.getRadius() + circle2.getRadius():
+        return True
+    else:
+        return False
 

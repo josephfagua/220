@@ -1,0 +1,10 @@
+window
+car
+multiply
+walk
+mongoose
+zebra
+gorilla
+monkey
+monday
+november

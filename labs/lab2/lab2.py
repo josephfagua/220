@@ -30,6 +30,7 @@ def triangle_area():
     area = math.sqrt(A)
     print(area)
 
+
 def sumSquares():
     lower_bound = eval(input("Enter the Lower Bound:"))
     upper_bound = eval(input("Enter the Upper Bound:"))

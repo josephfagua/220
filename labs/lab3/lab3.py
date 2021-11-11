@@ -46,7 +46,7 @@ def pi():
         denom = 1 + ((i +1)//2 * 2)
         frac = num / denom
         acc = acc * frac
-    print(acc * 2)
+    print(acc)
 
 
 
