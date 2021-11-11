@@ -81,7 +81,6 @@ def main():
         word = letter_check(ran_word, letters, user_in)
         print(word)
         print(word_spelled(word, ran_word))
-
 play_game()
 
 
