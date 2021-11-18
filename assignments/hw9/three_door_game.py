@@ -1,4 +1,5 @@
 from button import Button
+from random import choice, randrange
 from graphics import GraphWin, Rectangle, Point, Text
 
 
@@ -20,15 +21,11 @@ def three_door_game():
     door3.draw(win)
     bot_message = Text(Point(15, 2), "click to choose my door")
     bot_message.draw(win)
-
+    option = randrange(1, 4)
+    print(option)
     game = True
     while game:
-
-        car = win.getMouse()
-        print(car)
-
-
-
+        click = win.getMouse()
 
 
 if __name__ == '__main__':

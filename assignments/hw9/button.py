@@ -1,4 +1,4 @@
-from graphics import Text
+from graphics import *
 
 
 class Button:
@@ -23,15 +23,24 @@ class Button:
         self.label.undraw()
 
     def is_clicked(self, point):
-        self.shape
+        """This method checks to see if the mouse click in the region"""
+        px1 = point.getX()
+        py1 = point.getY()
+        recp1 = self.shape.getP1
+        recp2 = self.shape.getP2
+        recp1x = recp1.getX()
+        recp1y = recp1.getY()
+        recp2x = recp2.getX()
+        recp2y = recp2.getY()
+        if (recp1x <= px1 <= recp2x) and (recp1y <= py1 <= recp2y):
+            return True
+        else:
+            return False
 
     def color_button(self, color):
         """This method changes the color of the buttons to either green or red"""
         self.shape.setFill(color)
 
-# ask about what the intention of this method, is it intended to just change the door text or is it any text on thw
-# window
     def set_label(self, label):
-        """This method sets the text of a label to another string"""
+        """This method changes the text of the doors to given string"""
         self.label.setText(label)
-
