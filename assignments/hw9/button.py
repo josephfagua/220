@@ -23,11 +23,15 @@ class Button:
         self.label.undraw()
 
     def is_clicked(self, point):
-        pass
+        self.shape
 
     def color_button(self, color):
         """This method changes the color of the buttons to either green or red"""
         self.shape.setFill(color)
 
+# ask about what the intention of this method, is it intended to just change the door text or is it any text on thw
+# window
     def set_label(self, label):
+        """This method sets the text of a label to another string"""
         self.label.setText(label)
+

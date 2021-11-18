@@ -23,9 +23,9 @@ def three_door_game():
 
     game = True
     while game:
-        point = win.checkMouse()
-        win.getMouse()
-        print(point)
+
+        car = win.getMouse()
+        print(car)
 
 
 
