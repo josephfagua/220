@@ -24,15 +24,15 @@ class Button:
 
     def is_clicked(self, point):
         """This method checks to see if the mouse click in the region"""
-        px1 = point.getX()
-        py1 = point.getY()
-        recp1 = self.shape.getP1
-        recp2 = self.shape.getP2
-        recp1x = recp1.getX()
-        recp1y = recp1.getY()
-        recp2x = recp2.getX()
-        recp2y = recp2.getY()
-        if (recp1x <= px1 <= recp2x) and (recp1y <= py1 <= recp2y):
+        p1 = self.shape.getP1()
+        p2 = self.shape.getP2()
+        w = abs(p1.getX() - p2.getX())
+        h = abs(p1.getY() - p2.getY())
+        x = point.getX()
+        y = point.getY()
+        dx = abs(self.shape.getCenter().getX() - x)
+        dy = abs(self.shape.getCenter().getY() - y)
+        if dx <= w/2 and dy <= h/2:
             return True
         else:
             return False

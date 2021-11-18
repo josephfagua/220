@@ -22,11 +22,18 @@ def three_door_game():
     bot_message = Text(Point(15, 2), "click to choose my door")
     bot_message.draw(win)
     option = randrange(1, 4)
-    print(option)
-    game = True
-    while game:
-        click = win.getMouse()
 
+    click = win.getMouse()
+    if door1.is_clicked(click):
+        if option == 1:
+            door1.color_button("green")
+            top_message.setText("You Win!")
+            bot_message.setText("click to close")
+        if option != 1:
+            door1.color_button("red")
+            top_message.setText("You Lose!")
+            bot_message.setText("Door " + str(option) + " is the secret door")
+    win.getMouse()
 
 if __name__ == '__main__':
     three_door_game()
