@@ -60,4 +60,4 @@ class SalesPerson:
 
     def __str__(self):
         """returns "<employee_id><name>: <total sales>" """
-        return self.employee_id, self.name, self.total_sales()
+        return str(self.employee_id) + " " + str(self.name) + ": " + str(self.total_sales())
