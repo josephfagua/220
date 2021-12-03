@@ -61,4 +61,4 @@ class SalesPerson:
 
     def __str__(self):
         """returns "employee_id name: total sales" """
-        return "{0}-{1}:{2}".format(str(self.employee_id),str(self.name),str(self.total_sales()))
+        return "{0}-{1}:{2}".format(str(self.employee_id), str(self.name), str(self.total_sales()))

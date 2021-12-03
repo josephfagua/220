@@ -21,7 +21,7 @@ class SalesForce:
             for line in file.readlines():
                 employee_id, name, employee_sales = line.split(", ")
                 sales = employee_sales.split(" ")
-                sales_person = SalesPerson(employee_id, name)
+                sales_person = SalesPerson(eval(employee_id), name)
                 for sale in sales:
                     sales_person.enter_sale(sale)
                 self.sales_people.append(sales_person)
