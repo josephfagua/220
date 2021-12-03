@@ -9,7 +9,10 @@ I certify that this work is entirely my own.
 
 
 class SalesPerson:
+    """encapsulates data for a sales person"""
+
     def __init__(self, employee_id, name):
+        """constructs the class instance variables"""
         self.employee_id = employee_id
         self.name = name
         self.sales = []
@@ -28,7 +31,7 @@ class SalesPerson:
 
     def enter_sale(self, sale):
         """adds the value of sale to the sales list"""
-        sale = round(float(sale), 2)
+        sale = float(sale)
         self.sales.append(sale)
 
     def total_sales(self):
@@ -49,13 +52,12 @@ class SalesPerson:
         return False
 
     def compare_to(self, other):
-        """compares self to other and returns -1 if other has more in total sales than self, returns 1 if self has more
-        in total sales than other, and 0 if their total sales are the same """
+        """compares self to other and returns -1, returns 1 or 0"""
         if other.total_sales() > self.total_sales():
             return -1
-        elif other.total_sales() < self.total_sales():
+        if other.total_sales() < self.total_sales():
             return 1
-        elif other.total_sales() == self.total_sales():
+        if other.total_sales() == self.total_sales():
             return 0
 
     def __str__(self):
